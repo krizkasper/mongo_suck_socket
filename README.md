@@ -1,2 +1,3 @@
-# mongo_suck_socket
-playin with socket.io an mongo
+# mongo suck socket
+Playin with socket.io and mongo
+<i class="icon-folder-open">
