@@ -1,0 +1,19 @@
+html
+  head
+    title= title
+    style.
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font: 13px Helvetica, Arial; }
+    body
+        script(src="https://cdn.socket.io/socket.io-1.4.5.js")
+        script(src="http://code.jquery.com/jquery-1.11.1.js")
+        script.
+            var socket = io();
+            socket.on('mousemove', function(evt){
+                console.log('x:', evt.x, 'y:', evt.y);
+            });
+
+            $(document).on('mousemove', function(event){
+                 socket.emit('mousemove', {x:event.pageX, y:event.pageY});
+            //    socket.emit('mousemove', event);
+            });
